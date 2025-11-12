@@ -33,5 +33,5 @@ Du kommer att bygga en TODO-lista som en webbapplikation med av de tekniker vi h
 ## Installation
 
 - Ladda ner de biblotek (tex. SQLite) du behöver med `bundle` (eller `bundle install` som är samma sak)
-- Starta appen med `rake dev`
-- Kör seeder-filen med `rake seed`
+- Starta appen med `rake` Då körs även seed automatiskt ifall ingen databasfil finns.
+- Kör seeder-filen med `rake seed` för att återställa databasen från seed-filen.
