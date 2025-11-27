@@ -22,7 +22,7 @@ class Seeder
     db.execute('CREATE TABLE todos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
-                category_id INTEGER 
+                category_id INTEGER, 
                 description TEXT)')
   end
 

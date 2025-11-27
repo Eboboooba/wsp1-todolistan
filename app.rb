@@ -14,9 +14,18 @@ class App < Sinatra::Base
       return @db
     end
 
-    # Routen /
-    get '/' do
-        erb(:"index")
+    # Routen /todos
+  
+    get '/todos' do  
+      @todos = db.execute('SELECT * FROM todos ORDER BY name')
+      p @todos
+      erb(:"index")
     end
 
+
+  post '/todos/:id/delete' do | id |
+
+      db.execute('DELETE FROM todos WHERE id= ' +id)
+    redirect ('/todos')
+    end
 end
